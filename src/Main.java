@@ -8,13 +8,14 @@ public class Main {
         EmailConnection test = new EmailConnection(emailuserName,password);
         //hardcoded test not for final use
 
+        Emailout eout = new Emailout();
+
+
         for(int i=0; i<test.getBookAndInfo().size();i++){
 
 
-            for(int j=0;j<test.getBookAndInfo().get(i).size();j++){
-                System.out.println(test.getBookAndInfo().get(i).get(j));
-
-            }
+            eout.refineInfo(test.getBookAndInfo().get(i));
+            System.out.println(eout.apiFormatedTime(eout.getInfo().get("Due Date")));
         }
 
     }
