@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Properties;
-import java.io.*;
+
 
 import javax.mail.*;
 import javax.mail.internet.MimeMultipart;
@@ -58,7 +58,9 @@ public class EmailConnection {
 
             // retrieve the messages from the folder in an array and print it
             Message[] messages = inbox.getMessages();
+
             System.out.println("messages.length---" + messages.length);
+
             for(int i =messages.length-1;i>messages.length-messages.length+95;i--){
                // System.out.println(messages[i].getContent().toString());
 

@@ -15,7 +15,8 @@ public class Main {
 
 
             eout.refineInfo(test.getBookAndInfo().get(i));
-            System.out.println(eout.apiFormatedTime(eout.getInfo().get("Due Date")));
+            eout.sendReminder();
+           // System.out.println(eout.apiFormatedTime(eout.getInfo().get("Due Date")));
         }
 
     }
